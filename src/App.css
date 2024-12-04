@@ -1,66 +1,46 @@
-.app-bar {
-  background-color: #3f98b5;
-  color: white;
-  padding: 1rem;
+.app-bar{
   display: flex;
+  background-color: #4098b5;
+  color: white;
   justify-content: space-between;
   align-items: center;
+  padding: 0px 20px;
 }
 
-.app-bar h1 {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.user-section {
+.user-details{
+  padding: 0px 20px;
   display: flex;
+  gap: 20px;
+  font-size: 20px;
   align-items: center;
-  gap: 1rem;
+}
+.logout{
+  padding: 2px 10px;
+  border-right: 4px;
+  color: #4098b5;
 }
 
-.user-section button {
-  background-color: white;
-  color: #3f51b5;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-/* Login Form Styles */
-.login-form {
+.login-container{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  max-width: 300px;
-  margin: 0 auto;
+  gap: 16px;
+  width: fit-content;
+  margin: 10px auto;
+  align-items: center;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-group label {
-  font-weight: bold;
-}
-
-.form-group input {
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-.login-form button {
-  background-color: #3f98b5;
+.login-btn{
+  background-color: #4098b5;
   color: white;
+  padding: 8px 16px;
   border: none;
-  padding: 0.5rem 1rem;
   border-radius: 4px;
-  cursor: pointer;
 }
-
-.login-form button:hover {
-  background-color: #357a91;
+.logout-btn{
+  background-color: white ;
+  color: #4098b5; 
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
 }
