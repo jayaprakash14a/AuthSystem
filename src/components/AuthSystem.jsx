@@ -1,15 +1,20 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
+import { AuthContext } from '../context/AuthContext';
 
 const AuthSystem = () => {
-  const usernameRef = useRef();
+  const {isLoggedIn, authLogIn, userNameRef} = useContext(AuthContext);
+
   function ACTLogin(){
+    if(userNameRef.current.value === 'jaya'){
+      login();
+    }
     
   }
   return (
     <>
       <div>Auth System</div>
       <div>
-        Username : <input name='username' ref={usernameRef}  />
+        Username : <input name='username' ref={userNameRef}  />
       </div>
       <button onClick={ACTLogin}>Login</button>
       

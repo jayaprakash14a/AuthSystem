@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../App.css';
+import { AuthContext } from '../context/AuthContext';
 
-const Login = ({userName, loginStatus, actLogin, userRef}) => {
-  
+function Login({ actLogin, userRef, isContextAPI }) { //State Lifting input arguments
+
+  //contextAPI variables
+  const { authLogIn, userNameRef } = useContext(AuthContext);
+
   return (
     <div className='login-container'>
-      <h3 style={{color:"#4098b5", textDecoration:"Underline"}}>User credentials</h3>
-      <input ref={userRef} placeholder='Username' ></input>
-      <button onClick={actLogin} className='login-btn'>Login</button>
+      <h3 style={{ color: "#4098b5", textDecoration: "Underline" }}>User credentials</h3>
+      <input ref={isContextAPI ? userNameRef : userRef} placeholder='Username' ></input>
+      <button onClick={isContextAPI ? authLogIn : actLogin} className='login-btn'>Login</button>
     </div>
   )
 }
